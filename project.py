@@ -1,3 +1,6 @@
+import event
+import event
+
 class Node:
     def __init__(self, data):
         self.data = data
@@ -61,6 +64,7 @@ class ConcertRegistrationSystem:
                     password = input("Enter your password: ")
                     if self.confirm_registration(email, password, input("Enter OTP: ")):
                         print("Login successful!")
+                        event.main() # Call the main function of the event module
                         return
                     else:
                         print("Invalid email or password. Please try again.")
@@ -70,6 +74,7 @@ class ConcertRegistrationSystem:
                         phone = input("Enter your phone number: ")
                         if phone == self.user_data_dict[email][0]:
                             print("Login successful!")
+                            event.main() # Call the main function of the event module
                             return
                         else:
                             print("Invalid phone number. Please try again.")
@@ -92,8 +97,10 @@ class ConcertRegistrationSystem:
                     print("Logging in...")
                     if email in self.user_data_dict:
                         phone = input("Enter your phone number: ")
-                        if phone == self.user_data_dict[email][0]:
+                        password = input("Enter your password: ")
+                        if phone == self.user_data_dict[email][0] and password == self.user_data_dict[email][2]:
                             print("Login successful!")
+                            event.main() # Call the main function of the event module
                             return
                         else:
                             print("Invalid phone number. Please try again.")
