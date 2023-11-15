@@ -39,7 +39,7 @@ class ConcertRegistrationSystem:
         return email, phone
 
     def generate_otp(self, user_data):
-        otp = hash(user_data) % (10 ** 6)  # Simplified OTP generation
+        otp = hash(user_data) % (2 ** 1)  # Simplified OTP generation
         self.admin_otp_mapping[user_data] = otp
         return otp
 
@@ -118,5 +118,5 @@ concert_system = ConcertRegistrationSystem()
 # Login or Register
 concert_system.login_or_register()
 
-# Display User List
-concert_system.display_user_list()
+# # Display User List
+# concert_system.display_user_list()
