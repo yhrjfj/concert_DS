@@ -69,7 +69,7 @@ class ConcertRegistrationSystem:
                     else:
                         print("Invalid email or password. Please try again.")
                 elif login_choice.upper() == 'P':
-                    email = input("Enter your email: ")
+                    email = input("Enter your phone: ")
                     if email in self.user_data_dict:
                         phone = input("Enter your phone number: ")
                         if phone == self.user_data_dict[email][0]:

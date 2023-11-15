@@ -1,3 +1,5 @@
+import random
+
 def main():
     print("Welcome to the event menu!")
     print("Please select an option:")
@@ -16,15 +18,18 @@ def main():
 
 def create_event(event_type):
     # code to create a new event
-    print(f"You have registered for the {event_type} event.")
+    token = random.randint(1000, 9999)
+    print(f"You have registered for the {event_type} event. Your token is {token}.")
 
 def edit_event(event_type):
     # code to edit an existing event
-    print(f"You have registered for the {event_type} event.")
+    token = random.randint(1000, 9999)
+    print(f"You have registered for the {event_type} event. Your token is {token}.")
 
 def delete_event(event_type):
     # code to delete an event
-    print(f"You have registered for the {event_type} event.")
+    token = random.randint(1000, 9999)
+    print(f"You have registered for the {event_type} event. Your token is {token}.")
 
 if __name__ == "__main__":
     main()
